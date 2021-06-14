@@ -20,9 +20,12 @@ export default function CountryDetails({ code }) {
     }
   }, [data]);
 
-  return (
-    <div>
-      <> Capital is : {capital}</>
-    </div>
-  );
+  {
+    if (loading) return "....loading";
+    return (
+      <div>
+        <div> Capital is : {capital}</div>
+      </div>
+    );
+  }
 }
